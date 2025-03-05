@@ -1,5 +1,5 @@
 import React, {  } from "react";
-import { Button, Card, Form, Input } from "../Login/LoginStyled";
+import { Button, Card, Form, Input } from "./RegisterStyled";
 import { Link } from "react-router-dom";
 import { z } from "zod"
 import { useForm } from "react-hook-form";
@@ -40,12 +40,13 @@ const schema = z.object({
 
 export const Register = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit, reset, formState: { errors } } = useForm({
         resolver: zodResolver(schema)
     })
 
-    function onClicou(data){
+    function onRegister(data){
         console.log(data)
+        reset()
         
     }
 
@@ -55,7 +56,7 @@ export const Register = () => {
       <div>
         <h1>Register</h1>
 
-        <Form>
+        <Form onSubmit={handleSubmit(onRegister)}>
           <div>
             <Input {...register("username", {maxLength: 20})} type="text" required 
             placeholder="Username" />
@@ -78,7 +79,7 @@ export const Register = () => {
           </div>
 
           <article>
-            <Button type="submit" onClick={handleSubmit(onClicou)}>Cadastrar</Button>
+            <Button type="submit">Cadastrar</Button>
             <p><Link to="/">Faça login</Link></p>
           </article>
         </Form>
