@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  background-color: #b5f457;
+  background-color: white;
   width: 400px;
   height: 450px;
   border-radius: 7px;
@@ -54,8 +54,9 @@ export const Input = styled.input`
   width: 100%;
   height: 35px;
   outline: none;
-  border-radius: 7px;
+  border-radius: 0 7px 7px 0;
   border: none;
+  border-left: 2px solid black;
   font-size: 16px;
   padding-left: 8px;
 `;

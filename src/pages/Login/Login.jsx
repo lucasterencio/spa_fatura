@@ -9,13 +9,11 @@ export const Login = () => {
 
         <Form>
           <div>
-            <label>Email</label>
-            <Input type="email" required />
+            <Input type="email" required placeholder="E-mail"/>
           </div>
 
           <div>
-            <label>Senha</label>
-            <Input type="password" required />
+            <Input type="password" required placeholder="Senha"/>
           </div>
           
           <article>
