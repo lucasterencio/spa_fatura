@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card, Form, Input } from "./LoginStyled";
+import { Link, Outlet } from "react-router-dom";
 
 export const Login = () => {
   return (
@@ -18,7 +19,7 @@ export const Login = () => {
           
           <article>
               <Button>Login</Button>
-              <p>Não tem uma conta? Cadastre-se aqui</p>
+              <p>Não tem uma conta? <Link to="/register">Cadastre-se aqui</Link></p>
           </article>
         </Form>
       </div>

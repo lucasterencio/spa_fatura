@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Card = styled.div`
   background-color: white;
   width: 400px;
-  height: 450px;
+  height: 550px;
   border-radius: 7px;
 
   display: flex;
@@ -43,8 +43,12 @@ export const Form = styled.form`
     flex-direction: column;
     gap: 10px;
 
+    a{
+      text-decoration: none;
+    }
+
     p{
-        font-size: 18px;
+        font-size: 16px;
 
     }
   }
